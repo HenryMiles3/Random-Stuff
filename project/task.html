@@ -25,7 +25,8 @@
     <h2>Type something below:</h2>
     <div>
         <div>
-    <input type="number" id="time" placeholder="Enter time..."><h4 class="inputHead">Time</h4></input>
+            <h4 class="inputHead">Time</h4>
+    <input type="number" id="time" placeholder="Enter time..."></input>
     <select id="timeUnits">
         <option></option>
     </select>
@@ -38,11 +39,11 @@
     </div>
     
     <div class="output-display" id="outputTime">
-        O Hours
+        0 Hours
     </div>
 
     <div class="output-display" id="outputDistance">
-        O Km
+        0 Km
     </div>
 
     <div class="output-display"  id="speedR">
@@ -61,7 +62,7 @@
         timeInput.addEventListener('input', function() {
             timeTarget.textContent = this.value || 'No time entered';
             console.log("1")
-            speedCalc = distanceInput.value / timeInput.value
+            speedCalc = timeInput.value / distanceInput.value
             console.log("1.5",speedCalc)
             speedRequirement.textContent = speedCalc + " Km/h"
         });
@@ -70,7 +71,7 @@
         distanceInput.addEventListener('input', function() {
             distanceTarget.textContent = this.value || 'No distance entered';
             console.log("2")
-            speedCalc = distanceInput.value / timeInput.value
+            speedCalc = timeInput.value / distanceInput.value
             console.log("2.5", speedCalc)
             speedRequirement.textContent = speedCalc + " Km/h"
             
