@@ -1,0 +1,18 @@
+body {
+    background-color:linear-gradient(45deg,#03f4fc,#03b1fc);
+}
+
+h1 {
+    text-align: center;
+    color: green;
+}
+
+.input-container-1 {
+    color: green;
+    text-align: left;
+}
+
+.input-container-2 {
+    color: green;
+    text-align: right;
+}

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Live Update Example</title>
+    <style>
+        .output-display {
+            margin-top: 20px;
+            padding: 10px;
+            border: 1px solid #ddd;
+            min-height: 20px;
+        }
+        input {
+            margin: 5px;
+            padding: 8px;
+        }
+        .inputHead {
+            padding: 0px;
+            margin-top: 0px;
+        }
+    </style>
+</head>
+<body>
+    <h2>Type something below:</h2>
+    <div>
+        <div>
+    <input type="number" id="time" placeholder="Enter time..."><h4 class="inputHead">Time</h4></input>
+    <select id="timeUnits">
+        <option></option>
+    </select>
+    </div>
+    <input type="number" id="distance" placeholder="Enter distance...">
+    <select id="distanceUnits">
+        <option value="km">Kilometres</option>
+        <option value="mi">Miles</option>
+    </select>
+    </div>
+    
+    <div class="output-display" id="outputTime">
+        O Hours
+    </div>
+
+    <div class="output-display" id="outputDistance">
+        O Km
+    </div>
+
+    <div class="output-display"  id="speedR">
+        0 Km/h
+    </div>
+    
+    <script>
+        const timeInput = document.getElementById('time');
+        const distanceInput = document.getElementById('distance');
+        const timeTarget = document.getElementById('outputTime');
+        const distanceTarget = document.getElementById('outputDistance');
+        const speedRequirement = document.getElementById('speedR')
+        var speedCalc
+        
+        // Update the time output when time input changes
+        timeInput.addEventListener('input', function() {
+            timeTarget.textContent = this.value || 'No time entered';
+            console.log("1")
+            speedCalc = distanceInput.value / timeInput.value
+            console.log("1.5",speedCalc)
+            speedRequirement.textContent = speedCalc + " Km/h"
+        });
+        
+        // Update the distance output when distance input changes
+        distanceInput.addEventListener('input', function() {
+            distanceTarget.textContent = this.value || 'No distance entered';
+            console.log("2")
+            speedCalc = distanceInput.value / timeInput.value
+            console.log("2.5", speedCalc)
+            speedRequirement.textContent = speedCalc + " Km/h"
+            
+        });
+    </script>
+</body>
+</html>
