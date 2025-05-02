@@ -8,6 +8,7 @@ git config --global user.email "your.email@example.com"
 
 Adding a commit:
 git commit [file path]
+git add [file path]
 
 Push commits to Github:
 git push
