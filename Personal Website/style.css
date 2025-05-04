@@ -54,3 +54,17 @@ body {
   .solid {
     border-top: 3px solid #bbb;
   }
+
+  .foot {
+    background-color: #8eaa78;
+    font-family:'Poppins',sans-serif;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    box-sizing: border-box;
+    margin: 0;
+    bottom: 0;
+    position: sticky;
+  }
