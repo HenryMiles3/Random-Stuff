@@ -1,24 +1,56 @@
-.subBut {
-    font-family: "Poppins", sans-serif;
-    float:right;
-    background-color:#F5F5F5;
-    border:0px;
-    margin-right: 100px;
-    width: 120px;
-    height: 30px;
-    border-radius: 30px;
-}
-.subHead:hover {
-background-color:#e0dede;
-box-shadow: 10;
-}
-
-.header {
-    background-color: wheat;
+body {
+    font-family: 'Poppins', sans-serif;
     margin: 0;
     padding: 0;
-    height: 60px;
-    width:100%;
-    border-top: none;
-    
-}
+  }
+  
+  .header {
+    background-color: #a8be98;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    box-sizing: border-box;
+    margin: 0;
+    position: sticky;
+    top: 0;
+    font-family: 'Poppins', sans-serif;
+  }
+  
+  nav {
+    display: flex;
+    gap: 1rem;
+    font-family: 'Poppins', sans-serif;
+  }
+  
+  nav a {
+    color: white;
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+    padding: 0.5rem 1rem;
+  }
+  
+  nav a:hover {
+    background-color: #555;
+    border-radius: 4px;
+  }
+  
+  .subBut {
+    background-color: #81a068;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+  }
+  
+  .subBut:hover {
+    background-color: #74925c;
+  }
+  
+  .solid {
+    border-top: 3px solid #bbb;
+  }
