@@ -1,70 +1,91 @@
 body {
-    font-family: 'Poppins', sans-serif;
-    margin: 0;
-    padding: 0;
-  }
-  
-  .header {
-    background-color: #a8be98;
-    padding: 1rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-    box-sizing: border-box;
-    margin: 0;
-    position: sticky;
-    top: 0;
-    font-family: 'Poppins', sans-serif;
-  }
-  
-  nav {
-    display: flex;
-    gap: 1rem;
-    font-family: 'Poppins', sans-serif;
-  }
-  
-  nav a {
-    color: white;
-    text-decoration: none;
-    font-family: 'Poppins', sans-serif;
-    padding: 0.5rem 1rem;
-  }
-  
-  nav a:hover {
-    background-color: #555;
-    border-radius: 4px;
-  }
-  
-  .subBut {
-    background-color: #81a068;
-    color: white;
-    border: none;
-    border-radius: 4px;
-    padding: 0.5rem 1rem;
-    cursor: pointer;
-    font-family: 'Poppins', sans-serif;
-    font-weight: 500;
-  }
-  
-  .subBut:hover {
-    background-color: #74925c;
-  }
-  
-  .solid {
-    border-top: 3px solid #bbb;
-  }
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
 
-  .foot {
-    background-color: #8eaa78;
-    font-family:'Poppins',sans-serif;
-    padding: 1rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-    box-sizing: border-box;
-    margin: 0;
-    bottom: 0;
-    position: sticky;
-  }
+.header {
+  background-color: #a8be98;
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  box-sizing: border-box;
+  margin: 0;
+  position: sticky;
+  top: 0;
+  font-family: 'Poppins', sans-serif;
+  z-index: 100;
+}
+
+nav {
+  display: flex;
+  gap: 1rem;
+  font-family: 'Poppins', sans-serif;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-family: 'Poppins', sans-serif;
+  padding: 0.5rem 1rem;
+}
+
+nav a:hover {
+  background-color: #555;
+  border-radius: 4px;
+}
+
+.subBut {
+  background-color: #81a068;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+}
+
+.subBut:hover {
+  background-color: #74925c;
+}
+
+.solid {
+  border-top: 3px solid #74925c;
+  border-bottom: 0;
+  border-left: 0;
+  border-right: 0;
+}
+
+/* Fixed main-body styling */
+.main-body {
+  background-color:#555;
+  flex: 1; /* This is the critical property that was missing */
+  padding: 1rem; /* Added padding for content spacing */
+  color: white; /* Optional: Makes text readable on green background */
+}
+
+/* Kept your footer styling but added a slight adjustment */
+footer, .foot {
+  background-color: #74925c;
+  font-family: 'Poppins', sans-serif;
+  padding: 1rem;
+  display: flex;
+  justify-content: center; /* Changed from space-between since you don't have content yet */
+  align-items: center;
+  width: 100%;
+  box-sizing: border-box;
+  margin-top: auto;
+  text-align: center;
+}
+
+/* Optional: Placeholder content for footer so you can see it */
+.foot::after {
+  content: "© 2025 Nightmare";
+  color: white;
+}
